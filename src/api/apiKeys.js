@@ -1,0 +1,1 @@
+export const authKey = "AIzaSyD05kF2jMEfEUfBkkOL-1Cw3URygjwSxiU";

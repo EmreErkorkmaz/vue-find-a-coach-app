@@ -1,3 +1,5 @@
+import { authKey } from "../../../api/apiKeys";
+
 let timer;
 
 export default {
@@ -17,10 +19,10 @@ export default {
 
     const mode = payload.mode;
 
-    let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyD05kF2jMEfEUfBkkOL-1Cw3URygjwSxiU';
+    let url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${authKey}`;
 
     if (mode === 'signup') {
-      url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyD05kF2jMEfEUfBkkOL-1Cw3URygjwSxiU';
+      url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${authKey}`;
     }
     const response = await fetch(
       url,
